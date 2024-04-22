@@ -1,0 +1,60 @@
+@import "variables.scss";
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: $light-background;
+  a {
+    text-decoration: none;
+    margin-right: 1rem;
+    color: $dark-text;
+  }
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid $border-color;
+
+  .currency-name {
+    font-size: 1rem;
+  }
+
+  .star-icon {
+    cursor: pointer;
+  }
+}
+
+.theme-switcher {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.light-theme {
+  --background: $light-background;
+  --text-color: $dark-text;
+  --border-color: $border-color;
+}
+
+.dark-theme {
+  --background: $dark-background;
+  --text-color: $light-text;
+  --border-color: darken($border-color, 20%);
+}
+
+body {
+  background: var(--background);
+  color: var(--text-color);
+}
+
+.list-item {
+  border-bottom-color: var(--border-color);
+}
+
