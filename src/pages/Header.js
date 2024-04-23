@@ -13,9 +13,10 @@ const Header = () => {
                 <Link className="nav-link" to="/my-currencies">My Currencies</Link>
             </nav>
             <div className="theme-switcher">
-                <label>
+                <label htmlFor="toggle" className="theme-toggler settings-option" id="theme-toggler">
                     {theme === 'light' ? 'Light Theme' : 'Dark Theme'}
-                    <input type="checkbox" onChange={toggleTheme} checked={theme === 'dark'} />
+                    <input type="checkbox" id="toggle" className="theme-toggler__checkbox" onChange={toggleTheme} checked={theme === 'dark'} />
+                    <span aria-hidden="true" className="theme-toggler__switch"></span>
                 </label>
             </div>
         </header>

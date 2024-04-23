@@ -1,0 +1,20 @@
+@import "variables.scss";
+
+.currency-title {
+  font-size: 14px;
+}
+
+.input {
+  position: relative;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 0.5rem;
+  outline: none;
+
+  &-icon {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+  }
+}
